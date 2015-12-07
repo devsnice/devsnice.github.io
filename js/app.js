@@ -109,7 +109,21 @@
 			$('.bxslider').bxSlider({
 				 auto: true,
 				 default: 550
-			});		
+			});	
+			
+			// Navigation
+			$("#js-nav-trigger").click(function(){
+				if($(this).data("set") == "false") {
+					$("#myMenu").addClass("navigation_open-mobile");
+					$("#myMenu").find(".navigation-list").fadeIn();
+					$(this).data("set", "true");
+				}
+				else {
+					$("#myMenu").removeClass("navigation_open-mobile");
+					$("#myMenu").find(".navigation-list").fadeOut();
+					$(this).data("set", "false");
+				}
+			});
 		}
 		
 		return this.init();
