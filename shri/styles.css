@@ -36,11 +36,11 @@
     margin-top: 51px;
   }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
     .application-content {
       margin-top: 0;
     }
-}
+  }
 }
 
 .application_state-frozen {
@@ -764,12 +764,12 @@ template {
     border-bottom: none;
   }
 
-@supports ((position: -webkit-sticky) or (position: sticky)) {
+  @supports ((position: -webkit-sticky) or (position: sticky)) {
     .header {
       position: -webkit-sticky;
       position: sticky;
     }
-}
+  }
 }
 
 .header-content {
@@ -938,7 +938,8 @@ template {
   }
 }
 
-@supports (pointer-events: none) and ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
+@supports (pointer-events: none) and
+  ((-webkit-appearance: none) or (-moz-appearance: none) or (appearance: none)) {
   .custom-dropdown {
     position: relative;
   }
@@ -1285,7 +1286,14 @@ template {
   border-radius: 25px;
   border: 0px solid #010101;
   border-radius: 35px;
-  background: -webkit-gradient(linear, left top, right top, from(#068fff), color-stop(50%, #ffd800), to(#f76b1c));
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#068fff),
+    color-stop(50%, #ffd800),
+    to(#f76b1c)
+  );
   background: linear-gradient(90deg, #068fff 0%, #ffd800 50%, #f76b1c 100%);
 }
 
@@ -1720,7 +1728,7 @@ template {
 
 .dashboard-main_type-background {
   background: #eee;
-  background: url("/images/bg@2x.png");
+  background: url("./images/bg@2x.png");
   background-size: cover;
   background-position: center;
   border-radius: 20px;
