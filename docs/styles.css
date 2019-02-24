@@ -1,5 +1,77 @@
-h1 {
+.me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 100px 50px;
+  height: 100%;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-section {
+  width: 50%;
+  padding-right: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.unsplash-section {
+  width: 50%;
+  height: 100%;
+}
+
+.name {
   font-family: "Oswald", sans-serif;
+  font-size: 85px;
+  letter-spacing: 0.2px;
+  color: #2a2b23;
+  line-height: 63px;
+  margin: 0 0 35px;
+  text-transform: uppercase;
+}
+
+.myspeak {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.myspeak p {
+  font-size: 22px;
+  line-height: 28px;
+  color: #353535;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  line-height: 30px;
+}
+
+.photo {
+  width: 100%;
+  height: calc(100% - 30px);
+  margin: 0;
+  padding: 0;
+}
+
+.photo-img {
+  background: url("/images/me.jpg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.photo-description {
+  height: 30px;
+  line-height: 30px;
+  text-align: right;
 }
 h1,
 h2,
@@ -13,18 +85,13 @@ p {
   padding: 0;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 html,
 body {
   height: 100%;
 }
 
 body {
-  font-family: "Open Sans";
+  font-family: "PT Sans";
 }
 
 * {
