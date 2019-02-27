@@ -24,31 +24,33 @@
 .name {
   font-family: $fontHeader;
   font-size: 85px;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.1px;
   color: #2a2b23;
-  line-height: 63px;
-  margin: 0 0 35px;
+  line-height: 80px;
+  margin: -8px 0 40px;
   text-transform: uppercase;
 }
 
 .myspeak {
   flex-grow: 1;
+  text-rendering: optimizeLegibility;
 
   p {
-    font-size: 22px;
-    line-height: 28px;
+    font-size: 21px;
+    line-height: 30px;
     color: #353535;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
 }
 
 .social-links {
-  line-height: 30px;
+  line-height: 40px;
+  font-size: 21px;
 }
 
 .photo {
   width: 100%;
-  height: calc(100% - 30px);
+  height: calc(100% - 40px);
   margin: 0;
   padding: 0;
 
@@ -61,8 +63,30 @@
   }
 
   &-description {
-    height: 30px;
-    line-height: 30px;
+    height: 40px;
+    line-height: 40px;
     text-align: right;
+  }
+}
+
+.crossed {
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: calc(100% + 1px);
+    height: 2px;
+    background: #f9861c;
+    top: 50%;
+    left: -1px;
+  }
+}
+
+a {
+  color: #f9861c;
+
+  &:visited {
+    color: #ff6500;
   }
 }

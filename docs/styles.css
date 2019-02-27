@@ -29,10 +29,10 @@
 .name {
   font-family: "Oswald", sans-serif;
   font-size: 85px;
-  letter-spacing: 0.2px;
+  letter-spacing: 0.1px;
   color: #2a2b23;
-  line-height: 63px;
-  margin: 0 0 35px;
+  line-height: 80px;
+  margin: -8px 0 40px;
   text-transform: uppercase;
 }
 
@@ -40,22 +40,24 @@
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
+  text-rendering: optimizeLegibility;
 }
 
 .myspeak p {
-  font-size: 22px;
-  line-height: 28px;
+  font-size: 21px;
+  line-height: 30px;
   color: #353535;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .social-links {
-  line-height: 30px;
+  line-height: 40px;
+  font-size: 21px;
 }
 
 .photo {
   width: 100%;
-  height: calc(100% - 30px);
+  height: calc(100% - 40px);
   margin: 0;
   padding: 0;
 }
@@ -69,9 +71,31 @@
 }
 
 .photo-description {
-  height: 30px;
-  line-height: 30px;
+  height: 40px;
+  line-height: 40px;
   text-align: right;
+}
+
+.crossed {
+  position: relative;
+}
+
+.crossed:before {
+  content: "";
+  position: absolute;
+  width: calc(100% + 1px);
+  height: 2px;
+  background: #f9861c;
+  top: 50%;
+  left: -1px;
+}
+
+a {
+  color: #f9861c;
+}
+
+a:visited {
+  color: #ff6500;
 }
 h1,
 h2,
