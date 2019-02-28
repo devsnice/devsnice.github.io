@@ -28,9 +28,9 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .me {
-    padding: 0 10px 16px;
+    padding: 0 15px 16px;
   }
 }
 
@@ -57,11 +57,11 @@ body {
 
 @media (min-width: 768px) and (max-width: 1080px) {
   .about-section {
-    padding-right: 60px;
+    padding-right: 120px;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .about-section {
     padding-right: 0;
   }
@@ -88,12 +88,12 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .unsplash-section {
-    height: 300px;
+    height: 450px;
     max-height: 40%;
-    width: calc(100% + 10px + 10px);
-    margin: 0 -10px;
+    width: calc(100% + 15px + 15px);
+    margin: 0 -15px;
   }
 }
 
@@ -105,7 +105,7 @@ body {
   line-height: 80px;
   margin: -8px 0 40px;
   text-transform: uppercase;
-  color: #fff;
+  color: #f3f3f3;
 }
 
 @media (min-width: 768px) and (max-width: 1080px) {
@@ -116,7 +116,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .name {
     font-size: 36px;
     line-height: 36px;
@@ -139,11 +139,18 @@ body {
   color: #f3f3f3;
 }
 
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1080px) {
   .myspeak p {
-    font-size: 16px;
-    line-height: 22px;
-    margin-bottom: 10px;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+@media (max-width: 767px) {
+  .myspeak p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 14px;
   }
 }
 
@@ -153,7 +160,7 @@ body {
   color: #f3f3f3;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .social-links {
     font-size: 15px;
     line-height: 24px;
@@ -232,7 +239,7 @@ body {
 }
 
 body {
-  font-family: "PT Sans";
+  font-family: "PT Sans", sans-serif;
 }
 
 * {

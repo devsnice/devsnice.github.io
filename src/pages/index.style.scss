@@ -38,7 +38,7 @@ body {
   }
 
   @include media("tablet") {
-    padding-right: 60px;
+    padding-right: 120px;
   }
 
   @include media("mobile") {
@@ -61,7 +61,7 @@ body {
   }
 
   @include media("mobile") {
-    height: 300px;
+    height: 450px;
     max-height: 40%;
     width: calc(100% + #{$mobilePagePaddings} + #{$mobilePagePaddings});
     margin: 0 -#{$mobilePagePaddings};
@@ -76,7 +76,7 @@ body {
   line-height: 80px;
   margin: -8px 0 40px;
   text-transform: uppercase;
-  color: #fff;
+  color: #f3f3f3;
 
   @include media("tablet") {
     font-size: 72px;
@@ -102,10 +102,15 @@ body {
     margin-bottom: 25px;
     color: #f3f3f3;
 
+    @include media("tablet") {
+      font-size: 18px;
+      line-height: 24px;
+    }
+
     @include media("mobile") {
-      font-size: 16px;
-      line-height: 22px;
-      margin-bottom: 10px;
+      font-size: 18px;
+      line-height: 24px;
+      margin-bottom: 14px;
     }
   }
 }

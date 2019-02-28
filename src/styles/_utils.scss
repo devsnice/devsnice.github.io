@@ -1,4 +1,5 @@
-$mobileMaxWidth: 768px;
+$mobileMaxWidth: 767px;
+$tabletMinWidth: 768px;
 $tabletMaxWidth: 1080px;
 
 @mixin media($screenType) {
@@ -12,7 +13,7 @@ $tabletMaxWidth: 1080px;
     $query: "(max-width:" + $tabletMaxWidth ")";
   } @else if ($screenType == "tablet") {
     $query: "(min-width:" +
-      $mobileMaxWidth +
+      $tabletMinWidth +
       ") and (max-width:" +
       $tabletMaxWidth
       ")";
