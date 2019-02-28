@@ -1,4 +1,5 @@
 @import "../styles/vars";
+@import "../styles/utils";
 
 body {
   background: #000;
@@ -6,11 +7,23 @@ body {
 
 .me {
   display: flex;
-  padding: 100px 50px;
+  padding: 100px $desktopPagePaddings;
   height: 100%;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
+
+  @include media("notDesktop") {
+    flex-direction: column;
+  }
+
+  @include media("tablet") {
+    padding: 0 $tabletPagePaddings 36px;
+  }
+
+  @include media("mobile") {
+    padding: 0 $mobilePagePaddings 16px;
+  }
 }
 
 .about-section {
@@ -18,11 +31,41 @@ body {
   padding-right: 80px;
   display: flex;
   flex-direction: column;
+
+  @include media("notDesktop") {
+    width: 100%;
+    flex-grow: 1;
+  }
+
+  @include media("tablet") {
+    padding-right: 60px;
+  }
+
+  @include media("mobile") {
+    padding-right: 0;
+  }
 }
 
 .unsplash-section {
   width: 50%;
   height: 100%;
+
+  @include media("notDesktop") {
+    order: -1;
+  }
+
+  @include media("tablet") {
+    width: calc(100% + #{$tabletPagePaddings} + #{$tabletPagePaddings});
+    height: 410px;
+    margin: 0 -#{$tabletPagePaddings};
+  }
+
+  @include media("mobile") {
+    height: 300px;
+    max-height: 40%;
+    width: calc(100% + #{$mobilePagePaddings} + #{$mobilePagePaddings});
+    margin: 0 -#{$mobilePagePaddings};
+  }
 }
 
 .name {
@@ -34,6 +77,18 @@ body {
   margin: -8px 0 40px;
   text-transform: uppercase;
   color: #fff;
+
+  @include media("tablet") {
+    font-size: 72px;
+    line-height: 60px;
+    margin: 50px 0 30px;
+  }
+
+  @include media("mobile") {
+    font-size: 36px;
+    line-height: 36px;
+    margin: 25px 0 20px;
+  }
 }
 
 .myspeak {
@@ -46,6 +101,12 @@ body {
     color: #353535;
     margin-bottom: 25px;
     color: #f3f3f3;
+
+    @include media("mobile") {
+      font-size: 16px;
+      line-height: 22px;
+      margin-bottom: 10px;
+    }
   }
 }
 
@@ -53,6 +114,11 @@ body {
   line-height: 40px;
   font-size: 21px;
   color: #f3f3f3;
+
+  @include media("mobile") {
+    font-size: 15px;
+    line-height: 24px;
+  }
 }
 
 .photo {
@@ -60,6 +126,10 @@ body {
   height: calc(100% - 40px);
   margin: 0;
   padding: 0;
+
+  @include media("notDesktop") {
+    height: 100%;
+  }
 
   &-img {
     background: url("/images/me.jpg");
@@ -73,6 +143,10 @@ body {
     height: 40px;
     line-height: 40px;
     text-align: right;
+
+    @include media("notDesktop") {
+      display: none;
+    }
   }
 }
 

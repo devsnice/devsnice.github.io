@@ -1,0 +1,24 @@
+$mobileMaxWidth: 768px;
+$tabletMaxWidth: 1080px;
+
+@mixin media($screenType) {
+  $query: "screen and";
+
+  // mobile
+  @if ($screenType == "mobile") {
+    $query: "(max-width:" + $mobileMaxWidth ")";
+    // tablet
+  } @else if ($screenType == "notDesktop") {
+    $query: "(max-width:" + $tabletMaxWidth ")";
+  } @else if ($screenType == "tablet") {
+    $query: "(min-width:" +
+      $mobileMaxWidth +
+      ") and (max-width:" +
+      $tabletMaxWidth
+      ")";
+  }
+
+  @media #{$query} {
+    @content;
+  }
+}
