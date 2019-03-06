@@ -1,0 +1,30 @@
+{
+  "name": "devsnice.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Borisov Semen <devsnice@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "gulp --watch",
+    "build": "gulp --production"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "browser-sync": "^2.19.0",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-flatten": "^0.4.0",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sequence": "^1.0.0"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-util": "^3.0.8"
+  }
+}
