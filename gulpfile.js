@@ -51,7 +51,7 @@ gulp.task("scss", () => {
     .pipe(sass().on("error", sass.logError))
     .pipe(postcss(plugins))
     .pipe(concatCss("styles.css"))
-    .pipe(isProduction && cleanCSS())
+    .pipe(isProduction ? cleanCSS() : util.noop())
     .pipe(gulp.dest(`${paths.public}`));
 });
 
