@@ -17,6 +17,7 @@ const browserSync = require("browser-sync").create();
 const isProduction = !!util.env.production;
 
 const paths = {
+  root: ".",
   public: "./docs",
   pages: "./src/pages/**/*.pug",
   styles: "./src/**/*.scss",
@@ -36,7 +37,7 @@ gulp.task("pug", () =>
         pretty: true
       })
     )
-    .pipe(gulp.dest(paths.public))
+    .pipe(gulp.dest(paths.root))
 );
 
 /*
@@ -110,7 +111,7 @@ gulp.task("default", ["sequence-gulp"], () => {
   if (!isProduction) {
     browserSync.init({
       server: {
-        baseDir: paths.public
+        baseDir: paths.root
       }
     });
   }
