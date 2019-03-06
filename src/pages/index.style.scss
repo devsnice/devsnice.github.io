@@ -137,11 +137,17 @@ body {
   }
 
   &-img {
-    background: url("/images/me.jpg");
+    background: url("/images/me@full.jpg");
     background-position: center right;
     background-size: cover;
     width: 100%;
     height: 100%;
+
+    @include media("mobile") {
+      background: url("/images/me@mobile.jpg");
+      background-position: center right;
+      background-size: cover;
+    }
   }
 
   &-description {
